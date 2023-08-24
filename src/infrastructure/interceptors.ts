@@ -9,7 +9,7 @@ axios.interceptors.request.use(
       config.headers['Content-Type'] = 'application/json';
     }
     else {
-      window.location.href = URL.CLIENT
+      window.location.href = ''
     }
     return config
   },

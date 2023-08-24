@@ -1,0 +1,22 @@
+.login-panel{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+.login-panel {
+    background-image: url(https://ok12static.oktacdn.com/fs/bco/7/fs0tut9lfsbluDI8y5d5);
+  }
+  #btnLogin:hover {
+    background-color: #6F2C91 !important;
+    border-color: #6F2C91 #6F2C91 #6F2C91 !important;
+    background-image: linear-gradient(#6F2C91,#6F2C91) !important;
+  }
+  #btnLogin {
+    background-color: #6F2C91 !important;
+    background: linear-gradient(#6F2C91,#6F2C91) !important;
+    border-color: #004b75 #004b75 #00456a;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 15%), inset 0 1px 0 0 hsl(0deg 0% 100% / 10%);
+  }
+
+  
