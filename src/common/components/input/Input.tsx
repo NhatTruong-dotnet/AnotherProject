@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 import { IProps } from "../IProps";
 import { inputReducer } from "../../reducer/form-reducer";
 
-export const Input = (props: IProps) => {
+export const Input:React.FC<IProps> = (props) => {
     const [inputState, dispatch] = useReducer(inputReducer, { value: '' });
     
     const onChangeHandler = (event: any) => {
