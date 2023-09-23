@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from 'react'
 import { IProps } from '../IProps'
 import { selectReducer } from '../../reducer/form-reducer';
+import { ActionTypes } from '../../action-types';
 
 export default function Select(props: IProps) {
     const [data] = useState(props.data);
@@ -12,7 +13,7 @@ export default function Select(props: IProps) {
     const [inputState, dispatch] = useReducer(selectReducer, { value: '' });
     
     const onChangeHandler = (event: any) => {
-        dispatch({ type: 'CHANGE', val: event.target.value });
+        dispatch({ type: ActionTypes.SELECT_CHANGE, val: event.target.value });
         props.onSelectChange(event.target.name, event.target.value)
     }
 

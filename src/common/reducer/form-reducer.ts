@@ -1,6 +1,8 @@
+import { ActionTypes } from "../action-types";
+
 export const formReducer = (state: any, action: any) => {
     switch (action.type) {
-        case 'INPUT_CHANGE':
+        case ActionTypes.FORM_INPUT_CHANGE:
             return {
                 ...state, 
                 inputs: { 
@@ -15,7 +17,7 @@ export const formReducer = (state: any, action: any) => {
 
 export const inputReducer = (state: any, action: any) => {
     switch (action.type) {
-        case 'CHANGE':
+        case ActionTypes.INPUT_CHANGE:
             return { ...state, value: action.val };
         default:
             return state;
@@ -24,7 +26,7 @@ export const inputReducer = (state: any, action: any) => {
 
 export const selectReducer = (state: any, action: any) => {
     switch (action.type) {
-        case 'CHANGE':
+        case ActionTypes.SELECT_CHANGE:
             return { ...state, value: action.val };
         default:
             return state;
@@ -33,7 +35,7 @@ export const selectReducer = (state: any, action: any) => {
 
 export const buttonReducer = (state: any, action: any) => {
     switch (action.type) {
-        case 'CHANGE':
+        case ActionTypes.BUTTON_CHANGE:
             return { ...state, value: action.val };
         default:
             return state;

@@ -1,4 +1,5 @@
 import { useCallback, useReducer } from "react";
+import { ActionTypes } from "../action-types";
 import { formReducer } from "../reducer/form-reducer";
 
 export const useForm = (initialInput:any) => {
@@ -6,7 +7,7 @@ export const useForm = (initialInput:any) => {
     
     const inputHandler = (id:any, value:any) => {
         dispatch(
-      {type: 'INPUT_CHANGE', value: value, inputId: id})
+      {type: ActionTypes.FORM_INPUT_CHANGE, value: value, inputId: id})
     }
 
     const setFormData = useCallback((inputData:any) => {

@@ -1,21 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react';
-import Login from './common/pages/login/LoginPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Contact from './common/pages/unAuthorized/Sample';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./common/pages/home/home";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { PATH_CONSTANTS } from "./shared/routePath";
+import LCFDashBoard from "./lcf/pages/LCFDashBoard";
 
 function App() {
+  const ROUTES = createBrowserRouter([
+    {
+      path: PATH_CONSTANTS.HOME.LCF_DASHBOARD,
+      element: <LCFDashBoard />
+    },
+    {
+      path: '',
+      element: <Home />
+    }
+  ]);
   return (
-    <div className="App">
-      <AuthenticatedTemplate>
-        <Contact />
-      </AuthenticatedTemplate>
-      <UnauthenticatedTemplate>
-        <Login />
-      </UnauthenticatedTemplate>
-    </div>
+      <RouterProvider router={ROUTES} />
   );
 }
 

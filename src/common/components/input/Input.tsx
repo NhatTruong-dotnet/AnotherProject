@@ -2,12 +2,13 @@
 import React, { useReducer } from "react";
 import { IProps } from "../IProps";
 import { inputReducer } from "../../reducer/form-reducer";
+import { ActionTypes } from "../../action-types";
 
 export const Input:React.FC<IProps> = (props) => {
     const [inputState, dispatch] = useReducer(inputReducer, { value: '' });
     
     const onChangeHandler = (event: any) => {
-        dispatch({ type: 'CHANGE', val: event.target.value });
+        dispatch({ type: ActionTypes.INPUT_CHANGE, val: event.target.value });
         props.onInput(event.target.name, event.target.value)
     }
 
