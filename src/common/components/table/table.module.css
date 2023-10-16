@@ -1,0 +1,23 @@
+.headerItem{
+    background-color: #198754;
+    color: #fff;
+    padding-bottom: 1px;
+    padding-top: 7px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 3px
+}
+table{
+    font-size: 12px;
+    max-height: 245px;
+}
+.bodyItemStickyColumns{
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 3px;
+    color: black;
+    height: inherit;
+}
+tbody tr{
+    max-height: 49px;
+}

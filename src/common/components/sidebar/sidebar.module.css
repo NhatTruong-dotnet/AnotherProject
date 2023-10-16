@@ -1,9 +1,7 @@
 .sidebar {
   padding: 0px;
   border: 0.5px solid #e6e3e3;
-  min-height: 100vh;
   background-color: white;
-  width: 12%;
 }
 .sidebar ul{
   list-style: none;

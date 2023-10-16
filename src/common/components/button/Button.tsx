@@ -4,15 +4,18 @@ import { buttonReducer } from '../../reducer/form-reducer';
 import { ActionTypes } from '../../action-types';
 
 export default function Button(props: IProps) {
+
     const [inputState, dispatch] = useReducer(buttonReducer, { value: '' });
 
     const onClickHandler = (event: any) => {
         dispatch({ type: ActionTypes.BUTTON_CHANGE, val: event.target.value });
-        props.onSelectChange(event.target.name, event.target.value)
+        props.onSelectChange()
     }
-
+    const buttonStyle= {
+        'border': '1px solid #ced4da', fontSize: '12px',padding: '5px'
+    };
     return (
-        <button name={props.name} onClick={onClickHandler}>{props.label}</button>
-
+        <button className='btn-group' style={buttonStyle} name={props.name} onClick={onClickHandler}>{props.label}</button>
+        
     );
 }

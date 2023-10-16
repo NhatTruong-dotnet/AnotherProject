@@ -41,3 +41,12 @@ export const buttonReducer = (state: any, action: any) => {
             return state;
     }
 }
+
+export const modalReducer = (state: any, action: any) => {
+    switch (action.type) {
+        case ActionTypes.TOOGLE_MODAL:
+            return { ...state, show: !state.show };
+        default:
+            return state;
+    }
+}

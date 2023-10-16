@@ -16,6 +16,10 @@ function App() {
       element: <LCFDashBoard />
     },
     {
+      path: PATH_CONSTANTS.LCF.SUMMARY,
+      element: <LCFDashBoard />
+    },
+    {
       path: '',
       element: <Home />
     }
